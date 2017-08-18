@@ -53,7 +53,7 @@ $ git diff step-?..step-?
 - Create a gowiki.go file.
 - Add the `Page struct`.
 - Add the `save` and `loadPage` function.
-- Write a `main` function to test what we've written.
+- Write the `main` function to test what we've written.
 
 ### Step-1 _Error Handling_
 
@@ -76,7 +76,7 @@ Let's compile, run our code and visit [http://localhost:8080/view/test](http://l
 
 ### Step-3 _Editing Pages_
 
-- Add the `editHandler`
+- Add the `editHandler`.
 
 Now we have an editing page [http://localhost:8080/edit/test](http://localhost:8080/edit/test).
 
@@ -94,14 +94,16 @@ In this step, we will not be adding any new functionality to our application. In
 - Move all templating code to its own function.
 - Handle non-existent pages in `viewHandler`.
 
+Recompile the code, run and visit [http://localhost:8080/view/APageThatDoesntExist](http://localhost:8080/view/APageThatDoesntExist)
+
 ### Step-6 _Saving Pages_
 
 - Implement the `saveHandler` and uncommenting the related line in `main`.
 
 ### Step-7 _More Error Handling_
 
-- Handle errors in `renderTemplate`
-- Handle errors in `saveTemplate`
+- Handle errors in `renderTemplate`.
+- Handle errors in `saveTemplate`.
 
 ### Step-8 _Template Caching_
 
@@ -131,7 +133,7 @@ $ go build gowiki.go
 $ ./gowiki
 ```
 
-Visiting [http://localhost:8080/view/ANewPage][http://localhost:8080/view/ANewPage] should present you with the page edit form. You should then be able to enter some text, click 'Save', and be redirected to the newly created page.
+Visiting [http://localhost:8080/view/ANewPage](http://localhost:8080/view/ANewPage) should present you with the page edit form. You should then be able to enter some text, click 'Save', and be redirected to the newly created page.
 
 
 [go-article]: https://golang.org/doc/articles/wiki/
